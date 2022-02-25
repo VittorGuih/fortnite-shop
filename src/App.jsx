@@ -1,10 +1,8 @@
-import './global/reset.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Header } from './components/Header';
 import './global/global.scss';
-import { Header } from './components/Header/Header';
-import { Home } from './components/Home/home';
-import { Store } from './components/Store/store';
-import { Contact } from './components/Contact/contact';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './global/reset.scss';
+import { Contact, Home, Store } from './pages/';
 
 function App() {
   // useEffect(() => {}, []);
@@ -12,11 +10,20 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
         <Route path='/store' element={<Store />} />
+        <Route path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
+
+    // <BrowserRouter>
+    //   <Header />
+    //   <Routes>
+    //     <Route path='/' element={<Home />} />
+    //     <Route path='/store' element={<Store />} />
+    //     <Route path='/contact' element={<Contact />} />
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 
