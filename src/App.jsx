@@ -5,25 +5,15 @@ import './global/reset.scss';
 import { Contact, Home, Store } from './pages/';
 
 function App() {
-  // useEffect(() => {}, []);
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/store' element={<Store />} />
         <Route path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/store' element={<Store />} />
       </Routes>
     </BrowserRouter>
-
-    // <BrowserRouter>
-    //   <Header />
-    //   <Routes>
-    //     <Route path='/' element={<Home />} />
-    //     <Route path='/store' element={<Store />} />
-    //     <Route path='/contact' element={<Contact />} />
-    //   </Routes>
-    // </BrowserRouter>
   );
 }
 
